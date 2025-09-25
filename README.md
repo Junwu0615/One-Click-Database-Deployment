@@ -40,7 +40,7 @@
   docker-compose up -d
   ```
 
-- #### *檢視 docker service 清單*
+- #### *檢視服務是否正確啟用*
   ```bash
   docker ps -a
   ```
