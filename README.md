@@ -6,16 +6,16 @@
 
 <br>
 
-## *⭐ 一鍵部署各類型資料庫 ( SQL / NoSQL ) ⭐*
+## *⭐ 一鍵部署各類型資料庫 ( RDBMS / NoSQL ) ⭐*
 
 ### *A.　Current Progress*
 |項目|敘述|完成時間|
 |:--:|:--:|:--:|
 | 專案上架 | - | 2025-02-28 |
-| Oracle | SQL  | - |
-| SQL Server | SQL  | - |
-| PostgreSQL | SQL  | - |
-| MySQL | SQL  | - |
+| Oracle | RDBMS  | - |
+| SQL Server | RDBMS  | - |
+| PostgreSQL | RDBMS  | - |
+| MySQL | RDBMS  | - |
 | HBase | NoSQL  | - |
 | MongoDB | NoSQL  | - |
 | Neo4j | NoSQL  | - |
@@ -25,7 +25,7 @@
 <br>
 
 ### *B.　Objective*
-- #### *學習 SQL & NoSQL 差異性*
+- #### *學習 RDBMS & NoSQL 差異性*
 - #### *試著建構一鍵部署資料庫的建置*
 - #### *測試方式*
   - #### *Docker Compose 形式啟動服務*
