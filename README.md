@@ -12,10 +12,10 @@
 |項目|敘述|完成時間|
 |:--:|:--:|:--:|
 | 專案上架 | - | 2025-02-28 |
-| Oracle | RDBMS  | - |
-| SQL Server | RDBMS  | - |
+| SQL Server | RDBMS  | 2025-09-25 |
 | PostgreSQL | RDBMS  | - |
 | MySQL | RDBMS  | - |
+| Oracle | RDBMS  | - |
 | HBase | NoSQL  | - |
 | MongoDB | NoSQL  | - |
 | Neo4j | NoSQL  | - |
