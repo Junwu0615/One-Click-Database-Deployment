@@ -5,7 +5,7 @@ services:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: mssql_server
     ports:
-      - "9500:1433"
+      - "1434:1433"
     env_file:
       - .env
     environment:

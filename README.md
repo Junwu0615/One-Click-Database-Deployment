@@ -33,3 +33,29 @@
   - #### *基本的 CRUD*
 
 <br>
+
+### *C.　Deploy DB Build*
+- #### *啟動 docker-compose*
+  ```bash
+  docker-compose up -d
+  ```
+
+- #### *檢視 docker service 清單*
+  ```bash
+  docker ps -a
+  ```
+
+- #### *關閉服務*
+  ```bash
+  docker-compose down
+  ```
+
+- #### *[ 不建議 ] 關閉服務並清除 Volume*
+  ```bash
+  docker-compose down -v
+  ```
+
+### *D.　Volume Backup*
+- #### *使用 T-SQL 指令備份*
+- #### *直接複製 Docker Volume 內容*
+- #### *使用 Docker Volume 外掛程式 ( Volume Plugins )*
