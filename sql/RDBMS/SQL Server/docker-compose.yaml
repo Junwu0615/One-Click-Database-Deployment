@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  sqlserver:
+  sql_server:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: mssql_server
+    container_name: ms_sql_server
     ports:
       - "1434:1433"
     env_file:
@@ -12,8 +12,8 @@ services:
       - ACCEPT_EULA=Y # 接受 SQL Server 的授權條款
       - SA_PASSWORD=${SQLSERVER_SA_PASSWORD} # 從 .env 檔案讀取密碼
     volumes:
-      - mssql_data:/var/opt/mssql # 將資料庫檔案持久化到 Docker Volume
+      - docker_data:/var/opt/mssql # 將資料庫檔案持久化到 Docker Volume
     restart: always
 
 volumes:
-  mssql_data:
+  docker_data:
