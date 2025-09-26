@@ -12,8 +12,8 @@ services:
       - ACCEPT_EULA=Y # 接受 SQL Server 的授權條款
       - SA_PASSWORD=${SQLSERVER_SA_PASSWORD} # 從 .env 檔案讀取密碼
     volumes:
-      - docker_data:/var/opt/mssql # 將資料庫檔案持久化到 Docker Volume
-    restart: always
+      - docker_data:/var/opt/mssql
+    restart: unless-stopped
 
 volumes:
   docker_data:

@@ -16,10 +16,11 @@
 | PostgreSQL | RDBMS  | - |
 | MySQL | RDBMS  | - |
 | Oracle | RDBMS  | - |
-| HBase | NoSQL  | - |
+| InfluxDB | NoSQL  | - |
 | MongoDB | NoSQL  | - |
-| Neo4j | NoSQL  | - |
 | Redis | NoSQL  | - |
+| HBase | NoSQL  | - |
+| Neo4j | NoSQL  | - |
 | DynamoDB | NoSQL  | - |
 
 <br>
