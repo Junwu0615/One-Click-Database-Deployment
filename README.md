@@ -18,6 +18,7 @@
 | Oracle | RDBMS  | 需授權，略過 |
 | InfluxDB | NoSQL  | 2025-09-26 |
 | MongoDB | NoSQL  | 2025-09-26 |
+| Apache Jena | NoSQL  | 2025-09-26 |
 | Redis | NoSQL  | - |
 | HBase | NoSQL  | - |
 | Neo4j | NoSQL  | 需付費，略過 |

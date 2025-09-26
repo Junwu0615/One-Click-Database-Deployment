@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fuseki:
+    image: stain/jena-fuseki
+    container_name: jena_fuseki_container
+    ports:
+      - "3033:3030"
+
+    # ⚠️ 安全提醒：這是開發環境配置。
+    # 為了方便開發，我們在這裡禁用用戶認證，但生產環境中強烈建議啟用。
+    command: /jena-fuseki/fuseki-server --update --loc=/jena-data /mydataset
+
+    volumes:
+      - docker_data:/jena-data
+
+    restart: unless-stopped
+
+volumes:
+  docker_data:
