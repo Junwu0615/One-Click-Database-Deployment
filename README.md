@@ -22,6 +22,9 @@
 | HBase | NoSQL  | - |
 | Neo4j | NoSQL  | - |
 | DynamoDB | NoSQL  | - |
+| Docker Backup | T-SQL | - |
+| Docker Backup | Docker Volume | - |
+| Docker Backup | Volume Plugins | - |
 
 <br>
 
@@ -45,6 +48,11 @@
   ```bash
   docker ps -a
   ```
+  
+- #### *檢視資料持久化清單*
+  ```bash
+  docker volume ls
+  ```
 
 - #### *關閉服務*
   ```bash
@@ -55,6 +63,8 @@
   ```bash
   docker-compose down -v
   ```
+  
+- ![PNG](./sample/docker.PNG)
 
 <br>
 
