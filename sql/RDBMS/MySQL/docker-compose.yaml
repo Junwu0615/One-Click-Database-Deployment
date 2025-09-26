@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mysql_db:
+    image: mysql:8.0
+    container_name: mysql_container
+    ports:
+      - "3306:3306"
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+
+    volumes:
+      - docker_data:/var/lib/mysql
+      # ⚠️ 可選：在初次啟動時，執行位於這個目錄下的任何 .sql 或 .sh 腳本
+      # - ./init-scripts:/docker-entrypoint-initdb.d
+
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_container
+    ports:
+      - "3307:80"
+
+    environment:
+      PMA_HOST: mysql_db # 將 phpMyAdmin 連線的主機設定為資料庫服務的名稱 (在 Docker 網路中)
+      PMA_PORT: 3306 # 連線的主機埠
+
+    restart: unless-stopped
+
+volumes:
+  docker_data:

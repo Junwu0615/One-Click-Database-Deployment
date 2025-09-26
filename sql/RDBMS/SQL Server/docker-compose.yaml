@@ -6,13 +6,17 @@ services:
     container_name: ms_sql_server_container
     ports:
       - "1434:1433"
+
     env_file:
       - .env
     environment:
       - ACCEPT_EULA=Y # 接受 SQL Server 的授權條款
       - SA_PASSWORD=${SQLSERVER_SA_PASSWORD}
+      #- SA_PASSWORD=sql_server_password
+
     volumes:
       - docker_data:/var/opt/mssql
+
     restart: unless-stopped
 
 volumes:

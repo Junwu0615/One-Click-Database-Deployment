@@ -14,7 +14,7 @@
 | 專案上架 | - | 2025-02-28 |
 | SQL Server | RDBMS  | 2025-09-25 |
 | PostgreSQL | RDBMS  | 2025-09-26 |
-| MySQL | RDBMS  | - |
+| MySQL | RDBMS  | 2025-09-26 |
 | Oracle | RDBMS  | - |
 | InfluxDB | NoSQL  | 2025-09-26 |
 | MongoDB | NoSQL  | - |
@@ -65,6 +65,7 @@
   ```
   
 - ![PNG](./sample/docker.PNG)
+- ![PNG](./sample/docker_desktop.PNG)
 
 <br>
 
