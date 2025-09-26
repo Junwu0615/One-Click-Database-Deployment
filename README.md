@@ -15,12 +15,12 @@
 | SQL Server | RDBMS  | 2025-09-25 |
 | PostgreSQL | RDBMS  | 2025-09-26 |
 | MySQL | RDBMS  | 2025-09-26 |
-| Oracle | RDBMS  | - |
+| Oracle | RDBMS  | 需授權，略過 |
 | InfluxDB | NoSQL  | 2025-09-26 |
-| MongoDB | NoSQL  | - |
+| MongoDB | NoSQL  | 2025-09-26 |
 | Redis | NoSQL  | - |
 | HBase | NoSQL  | - |
-| Neo4j | NoSQL  | - |
+| Neo4j | NoSQL  | 需付費，略過 |
 | DynamoDB | NoSQL  | - |
 | Docker Backup | T-SQL | - |
 | Docker Backup | Docker Volume | - |

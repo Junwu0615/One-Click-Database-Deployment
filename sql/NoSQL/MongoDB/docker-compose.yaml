@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb_container
+    ports:
+      - "27017:27017"
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+
+    volumes:
+      - docker_data:/data/db
+      # ⚠️ 可選：在初次啟動時，執行位於這個目錄下的任何 .js 腳本
+      # - ./init-scripts:/docker-entrypoint-initdb.d
+
+    restart: unless-stopped
+
+volumes:
+  docker_data:
