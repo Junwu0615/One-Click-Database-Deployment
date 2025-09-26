@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: redis_container
+    ports:
+      - "6379:6379"
+
+    # 重要的環境變數：設定密碼 (AUTH)
+    # ⚠️ 這是強制性參數，請務必修改密碼以啟用安全模式
+    command: redis-server --requirepass redis_default_password
+
+    volumes:
+      - redis_data:/data
+
+    restart: unless-stopped
+
+  redis_insight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight_container
+    ports:
+      - "6380:5540"
+
+    environment:
+      REDISINSIGHT_HOST: 0.0.0.0 # 存取 Redis 服務，必須設置這個變數
+
+    volumes:
+      - redis_insight_data:/db
+
+    restart: unless-stopped
+
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:
+  redis_insight_data:
