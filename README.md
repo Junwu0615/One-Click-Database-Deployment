@@ -13,10 +13,10 @@
 |:--:|:--:|:--:|
 | 專案上架 | - | 2025-02-28 |
 | SQL Server | RDBMS  | 2025-09-25 |
-| PostgreSQL | RDBMS  | - |
+| PostgreSQL | RDBMS  | 2025-09-26 |
 | MySQL | RDBMS  | - |
 | Oracle | RDBMS  | - |
-| InfluxDB | NoSQL  | - |
+| InfluxDB | NoSQL  | 2025-09-26 |
 | MongoDB | NoSQL  | - |
 | Redis | NoSQL  | - |
 | HBase | NoSQL  | - |
@@ -72,3 +72,8 @@
 - #### *使用 T-SQL 指令備份*
 - #### *直接複製 Docker Volume 內容*
 - #### *使用 Docker Volume 外掛程式 ( Volume Plugins )*
+
+<br>
+
+### *E.　Notice*
+- #### *設定重啟策略 : 建議使用 unless-stopped，而非 always ( 避免無限重啟循環 )*

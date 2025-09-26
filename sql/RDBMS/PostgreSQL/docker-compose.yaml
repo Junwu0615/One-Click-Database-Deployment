@@ -3,9 +3,10 @@ version: '3.8'
 services:
   postgres_db: # 其他容器可以使用 'postgres_db' 來連線
     image: postgres:16.2-alpine # 建議使用帶有版本號的 Alpine 變體以縮小體積
-    container_name: postgres_sql
+    container_name: postgres_sql_container
     ports:
       - "5432:5432"
+
     env_file:
       - .env
     environment:
@@ -18,7 +19,6 @@ services:
       # 可選：在初次啟動時，執行位於這個目錄下的任何 .sql 或 .sh 腳本
       # - ./init-scripts:/docker-entrypoint-initdb.d
 
-    # 設定重啟策略：除非手動停止，否則容器會持續運行
     restart: unless-stopped
 
   pgadmin:
@@ -26,13 +26,16 @@ services:
     container_name: pgadmin_container
     ports:
       - "5050:80"
+
     env_file:
       - .env
     environment:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+
     volumes:
       - pgadmin_data:/var/lib/pgadmin
+
     restart: unless-stopped
 
 volumes:
